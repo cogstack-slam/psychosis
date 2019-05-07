@@ -1,0 +1,57 @@
+Acute and transient psychotic disorders---F23.x
+Substance use disorders---F10 (excluding *.5, *.4, *.7)
+Substance use disorders---F11 (excluding *.5, *.4, *.7)
+Substance use disorders---F12 (excluding *.5, *.4, *.7)
+Substance use disorders---F13 (excluding *.5, *.4, *.7)
+Substance use disorders---F14 (excluding *.5, *.4, *.7)
+Substance use disorders---F15 (excluding *.5, *.4, *.7)
+Substance use disorders---F16 (excluding *.5, *.4, *.7)
+Substance use disorders---F17 (excluding *.5, *.4, *.7)
+Substance use disorders---F18 (excluding *.5, *.4, *.7)
+Substance use disorders---F19 (excluding *.5, *.4, *.7)
+Bipolar mood disorders---F31.x (excluding F31.2 and F31.5)
+Bipolar mood disorders---F34.0
+Bipolar mood disorders---F30.x (excluding *.2)
+Non bipolar mood disorders---[F32-F33].x (excluding F32.3 and F33.3)
+Non bipolar mood disorders---F34.1
+Non bipolar mood disorders---F34.8, F34.9, F38.x, F39
+Anxiety disorders---F40.x
+Anxiety disorders---F41.0
+Anxiety disorders---F41.1
+Anxiety disorders---F41.2-F41.9
+Anxiety disorders---F42.x
+Anxiety disorders---F43.x
+Anxiety disorders---F44.x
+Anxiety disorders---F45.x
+Anxiety disorders---F48.x
+Personality disorders---F60.0  
+Personality disorders---F60.1
+Personality disorders---F60.2 
+Personality disorders---F60.3 
+Personality disorders---F60.4 
+Personality disorders---F60.5 
+Personality disorders---F60.6 
+Personality disorders---F60.7 
+Personality disorders---F60.8-F60.9, F61, F62.x, F68.x, F69 
+Personality disorders---F21 
+Personality disorders---F63.x 
+Personality disorders---F64.x, F65.x, F66.x
+Developmental disorders---F80.x 
+Developmental disorders---F81.x, F82, F83
+Developmental disorders---F84.x 
+Developmental disorders---F88, F89
+Childhood/adolescence onset disorders---F90.x
+Childhood/adolescence onset disorders---F91.x
+Childhood/adolescence onset disorders---F92.x, F93.x, F94.x, F98.x
+Childhood/adolescence onset disorders---F95.x
+Physiological syndromes---F50.x
+Physiological syndromes---F51.x
+Physiological syndromes---F52.x
+Physiological syndromes---F53.x (excluding F53.1)
+Physiological syndromes---F54.x, F55, F59
+Mental retardation---F70.x
+Mental retardation---F71.x
+Mental retardation---F72.x
+Mental retardation---F73.x
+Mental retardation---F78.x
+Mental retardation---F79.x
