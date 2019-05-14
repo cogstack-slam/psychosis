@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[47]:
 
 
 
-# In[2]:
+# In[48]:
 
 
 from elasticsearch import Elasticsearch
@@ -21,7 +21,7 @@ import time
 
 # # Load data from Cogstack
 
-# In[3]:
+# In[49]:
 
 
 logger = logging.getLogger('psychosis_risk_cal')
@@ -33,13 +33,13 @@ logger.addHandler(handler)
 logger.setLevel(logging.DEBUG)
 
 
-# In[4]:
+# In[50]:
 
 
 def read_elas_index(client, index, doc_type='doc'):
     while not client.indices.exists(index):
         time.sleep(30)
-    s = Search(using=client, index=index, doc_type=doc_type).filter('match', coeff_validated=0)
+    s = Search(using=client, index=index, doc_type=doc_type).filter('match', coeff_validated='0')
     logger.info('Loaded %s documents' %s.count())
     df = pd.DataFrame((d.to_dict() for d in s.scan()))
     logger.info('Documents shape: %s %s' %(df.shape))
@@ -57,7 +57,7 @@ def read_elas_index(client, index, doc_type='doc'):
 
 # # Ethnicity (changed to lower for string match and added two mapping rules)
 
-# In[5]:
+# In[51]:
 
 
 # Added the following two lines in original list
@@ -72,7 +72,7 @@ def read_eth_mapping(file_path='ethnicity_mapping.txt'):
     return eth_map
 
 
-# In[6]:
+# In[52]:
 
 
 def ethnicity_coeff(df):
@@ -105,7 +105,7 @@ def ethnicity_coeff(df):
 
 # # Gender
 
-# In[7]:
+# In[53]:
 
 
 def gender_coeff(df):
@@ -120,13 +120,13 @@ def gender_coeff(df):
 
 # # Age
 
-# In[8]:
+# In[41]:
 
 
 # np.floor(13.2)
 
 
-# In[9]:
+# In[42]:
 
 
 # Age should be int, not float. using floor. 
@@ -143,7 +143,7 @@ def age_coeff(df):
 
 # # Gender & Age
 
-# In[10]:
+# In[43]:
 
 
 def gender_age_coeff(df):
@@ -158,7 +158,7 @@ def gender_age_coeff(df):
 
 # # Diagnosis index (added exclusions)
 
-# In[11]:
+# In[44]:
 
 
 def diag_coeff(df):
@@ -240,7 +240,7 @@ def diag_coeff(df):
 
 # # Risk scores
 
-# In[12]:
+# In[45]:
 
 
 def risk_score(df):
@@ -248,7 +248,7 @@ def risk_score(df):
     
     df['PI'] = None
     df.loc[df['diagnosis_group_coeff'].notna() & df['age_coeff'].notna()
-           & df['eth_coeff'].notna() & df['gender_coeff'].notna(), 'PI'] = df['gender_coeff'] + df['age_coeff'] + df['gender_age_coeff'] + df['eth_coeff'] + df['diagnosis_group_coeff']
+           & df['eth_coeff'].notna() & df['gender_coeff'].notna(), 'PI'] = df['gender_coeff'] + df['age_coeff'] - df['gender_age_coeff'] + df['eth_coeff'] + df['diagnosis_group_coeff']
     df['risk_calculated_dttm'] = datetime.now()
 #     dfvald = df.loc[df['coeff_validated'] == True] # Records that with "coeff_validated == True" can hava diagnoses in 'Psychotic disorder','Organic mental disorder' and others. Risk scores of these records are not calculated
     
@@ -284,7 +284,7 @@ def risk_score(df):
 
 
 
-# In[14]:
+# In[46]:
 
 
 while True:

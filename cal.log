@@ -1,297 +1,80 @@
-2019-05-02 12:09:37,064 psychosis_risk_cal INFO     : Connect to host.....
-2019-05-02 12:09:37,080 psychosis_risk_cal INFO     : Loaded 78450 documents
-2019-05-02 12:09:42,515 psychosis_risk_cal INFO     : Documents shape: 78450 17
-2019-05-02 12:09:42,515 psychosis_risk_cal INFO     : Change data types
-2019-05-02 12:09:42,938 psychosis_risk_cal INFO     : Documents shape after changing data types: 78450 17
-2019-05-02 12:09:42,939 psychosis_risk_cal INFO     : Mapping ePJS ethnicity names to CRIS ethnicity names
-2019-05-02 12:09:42,994 psychosis_risk_cal INFO     : Calcuating ethnicity coeffs
-2019-05-02 12:09:43,313 psychosis_risk_cal INFO     : Finished calcuating ethnicity coeffs
-2019-05-02 12:09:43,313 psychosis_risk_cal INFO     : Calcuating gender coeffs
-2019-05-02 12:09:43,601 psychosis_risk_cal INFO     : Finished calcuating gender coeffs
-2019-05-02 12:09:43,601 psychosis_risk_cal INFO     : Calcuating age coeffs
-2019-05-02 12:09:43,644 psychosis_risk_cal INFO     : Finished calcuating age coeffs
-2019-05-02 12:09:43,644 psychosis_risk_cal INFO     : Calcuating gender*age coeffs
-2019-05-02 12:09:44,018 psychosis_risk_cal INFO     : Finished calcuating gender*age coeffs
-2019-05-02 12:09:44,018 psychosis_risk_cal INFO     : Mapping ICD-10 codes to disorder categories
-2019-05-02 12:09:45,001 psychosis_risk_cal INFO     : Finshed mapping ICD-10 codes to disorder categories
-2019-05-02 12:09:45,001 psychosis_risk_cal INFO     : Calculating diagnosis coeffs
-2019-05-02 12:09:45,376 psychosis_risk_cal INFO     : Finished calculating diagnosis coeffs
-2019-05-02 12:09:45,376 psychosis_risk_cal INFO     : Labeling records that do not miss any predictors
-2019-05-02 12:09:45,401 psychosis_risk_cal INFO     : Calculating risk scores per year
-2019-05-02 12:09:46,001 psychosis_risk_cal INFO     : Finished calculating risk scores per year
-2019-05-02 12:09:46,001 psychosis_risk_cal INFO     : Write patients at risk into Cogstack
-2019-05-02 12:09:46,001 psychosis_risk_cal INFO     : Numbers of risky patients: 52721 32
-2019-05-02 12:09:58,195 psychosis_risk_cal INFO     : Write sucessfully!
-2019-05-02 12:09:58,195 psychosis_risk_cal INFO     : Update records in source table
-2019-05-02 12:09:58,203 psychosis_risk_cal INFO     : Numbers of records that are needed to update: 78450 4
-2019-05-02 12:10:09,273 psychosis_risk_cal INFO     : Updated sucessfully!
-2019-05-03 00:10:09,313 psychosis_risk_cal INFO     : Connect to host.....
-2019-05-03 00:10:09,326 psychosis_risk_cal INFO     : Loaded 199400 documents
-2019-05-03 00:10:21,784 psychosis_risk_cal INFO     : Documents shape: 199400 17
-2019-05-03 00:10:21,784 psychosis_risk_cal INFO     : Change data types
-2019-05-03 00:10:22,698 psychosis_risk_cal INFO     : Documents shape after changing data types: 199400 17
-2019-05-03 00:10:22,718 psychosis_risk_cal INFO     : Mapping ePJS ethnicity names to CRIS ethnicity names
-2019-05-03 00:10:22,850 psychosis_risk_cal INFO     : Calcuating ethnicity coeffs
-2019-05-03 00:10:23,586 psychosis_risk_cal INFO     : Finished calcuating ethnicity coeffs
-2019-05-03 00:10:23,586 psychosis_risk_cal INFO     : Calcuating gender coeffs
-2019-05-03 00:10:24,297 psychosis_risk_cal INFO     : Finished calcuating gender coeffs
-2019-05-03 00:10:24,297 psychosis_risk_cal INFO     : Calcuating age coeffs
-2019-05-03 00:10:24,317 psychosis_risk_cal INFO     : Finished calcuating age coeffs
-2019-05-03 00:10:24,317 psychosis_risk_cal INFO     : Calcuating gender*age coeffs
-2019-05-03 00:10:25,206 psychosis_risk_cal INFO     : Finished calcuating gender*age coeffs
-2019-05-03 00:10:25,206 psychosis_risk_cal INFO     : Mapping ICD-10 codes to disorder categories
-2019-05-03 00:10:26,850 psychosis_risk_cal INFO     : Finshed mapping ICD-10 codes to disorder categories
-2019-05-03 00:10:26,850 psychosis_risk_cal INFO     : Calculating diagnosis coeffs
-2019-05-03 00:10:27,662 psychosis_risk_cal INFO     : Finished calculating diagnosis coeffs
-2019-05-03 00:10:27,662 psychosis_risk_cal INFO     : Labeling records that do not miss any predictors
-2019-05-03 00:10:27,695 psychosis_risk_cal INFO     : Calculating risk scores per year
-2019-05-03 00:10:28,960 psychosis_risk_cal INFO     : Finished calculating risk scores per year
-2019-05-03 00:10:28,988 psychosis_risk_cal INFO     : Write patients at risk into Cogstack
-2019-05-03 00:10:28,988 psychosis_risk_cal INFO     : Numbers of risky patients: 130899 32
-2019-05-03 00:10:59,658 psychosis_risk_cal INFO     : Write sucessfully!
-2019-05-03 00:10:59,658 psychosis_risk_cal INFO     : Update records in source table
-2019-05-03 00:10:59,671 psychosis_risk_cal INFO     : Numbers of records that are needed to update: 199400 4
-2019-05-03 00:11:28,166 psychosis_risk_cal INFO     : Updated sucessfully!
-2019-05-03 12:11:28,264 psychosis_risk_cal INFO     : Connect to host.....
-2019-05-03 12:11:28,281 psychosis_risk_cal INFO     : Loaded 199408 documents
-2019-05-03 12:11:40,640 psychosis_risk_cal INFO     : Documents shape: 199408 17
-2019-05-03 12:11:40,640 psychosis_risk_cal INFO     : Change data types
-2019-05-03 12:11:41,521 psychosis_risk_cal INFO     : Documents shape after changing data types: 199408 17
-2019-05-03 12:11:41,590 psychosis_risk_cal INFO     : Mapping ePJS ethnicity names to CRIS ethnicity names
-2019-05-03 12:11:41,799 psychosis_risk_cal INFO     : Calcuating ethnicity coeffs
-2019-05-03 12:11:42,573 psychosis_risk_cal INFO     : Finished calcuating ethnicity coeffs
-2019-05-03 12:11:42,574 psychosis_risk_cal INFO     : Calcuating gender coeffs
-2019-05-03 12:11:43,273 psychosis_risk_cal INFO     : Finished calcuating gender coeffs
-2019-05-03 12:11:43,273 psychosis_risk_cal INFO     : Calcuating age coeffs
-2019-05-03 12:11:43,291 psychosis_risk_cal INFO     : Finished calcuating age coeffs
-2019-05-03 12:11:43,291 psychosis_risk_cal INFO     : Calcuating gender*age coeffs
-2019-05-03 12:11:44,030 psychosis_risk_cal INFO     : Finished calcuating gender*age coeffs
-2019-05-03 12:11:44,030 psychosis_risk_cal INFO     : Mapping ICD-10 codes to disorder categories
-2019-05-03 12:11:45,773 psychosis_risk_cal INFO     : Finshed mapping ICD-10 codes to disorder categories
-2019-05-03 12:11:45,773 psychosis_risk_cal INFO     : Calculating diagnosis coeffs
-2019-05-03 12:11:46,581 psychosis_risk_cal INFO     : Finished calculating diagnosis coeffs
-2019-05-03 12:11:46,581 psychosis_risk_cal INFO     : Labeling records that do not miss any predictors
-2019-05-03 12:11:46,616 psychosis_risk_cal INFO     : Calculating risk scores per year
-2019-05-03 12:11:47,885 psychosis_risk_cal INFO     : Finished calculating risk scores per year
-2019-05-03 12:11:47,950 psychosis_risk_cal INFO     : Write patients at risk into Cogstack
-2019-05-03 12:11:47,950 psychosis_risk_cal INFO     : Numbers of risky patients: 130905 32
-2019-05-03 12:12:19,054 psychosis_risk_cal INFO     : Write sucessfully!
-2019-05-03 12:12:19,055 psychosis_risk_cal INFO     : Update records in source table
-2019-05-03 12:12:19,087 psychosis_risk_cal INFO     : Numbers of records that are needed to update: 199408 4
-2019-05-03 12:12:48,820 psychosis_risk_cal INFO     : Updated sucessfully!
-2019-05-04 00:12:48,917 psychosis_risk_cal INFO     : Connect to host.....
-2019-05-04 00:12:48,928 psychosis_risk_cal INFO     : Loaded 199447 documents
-2019-05-04 00:13:01,376 psychosis_risk_cal INFO     : Documents shape: 199447 17
-2019-05-04 00:13:01,376 psychosis_risk_cal INFO     : Change data types
-2019-05-04 00:13:02,266 psychosis_risk_cal INFO     : Documents shape after changing data types: 199447 17
-2019-05-04 00:13:02,320 psychosis_risk_cal INFO     : Mapping ePJS ethnicity names to CRIS ethnicity names
-2019-05-04 00:13:02,453 psychosis_risk_cal INFO     : Calcuating ethnicity coeffs
-2019-05-04 00:13:03,159 psychosis_risk_cal INFO     : Finished calcuating ethnicity coeffs
-2019-05-04 00:13:03,159 psychosis_risk_cal INFO     : Calcuating gender coeffs
-2019-05-04 00:13:03,862 psychosis_risk_cal INFO     : Finished calcuating gender coeffs
-2019-05-04 00:13:03,862 psychosis_risk_cal INFO     : Calcuating age coeffs
-2019-05-04 00:13:03,885 psychosis_risk_cal INFO     : Finished calcuating age coeffs
-2019-05-04 00:13:03,885 psychosis_risk_cal INFO     : Calcuating gender*age coeffs
-2019-05-04 00:13:04,793 psychosis_risk_cal INFO     : Finished calcuating gender*age coeffs
-2019-05-04 00:13:04,794 psychosis_risk_cal INFO     : Mapping ICD-10 codes to disorder categories
-2019-05-04 00:13:06,482 psychosis_risk_cal INFO     : Finshed mapping ICD-10 codes to disorder categories
-2019-05-04 00:13:06,482 psychosis_risk_cal INFO     : Calculating diagnosis coeffs
-2019-05-04 00:13:07,281 psychosis_risk_cal INFO     : Finished calculating diagnosis coeffs
-2019-05-04 00:13:07,281 psychosis_risk_cal INFO     : Labeling records that do not miss any predictors
-2019-05-04 00:13:07,313 psychosis_risk_cal INFO     : Calculating risk scores per year
-2019-05-04 00:13:08,406 psychosis_risk_cal INFO     : Finished calculating risk scores per year
-2019-05-04 00:13:08,478 psychosis_risk_cal INFO     : Write patients at risk into Cogstack
-2019-05-04 00:13:08,479 psychosis_risk_cal INFO     : Numbers of risky patients: 130926 32
-2019-05-04 00:13:39,449 psychosis_risk_cal INFO     : Write sucessfully!
-2019-05-04 00:13:39,449 psychosis_risk_cal INFO     : Update records in source table
-2019-05-04 00:13:39,478 psychosis_risk_cal INFO     : Numbers of records that are needed to update: 199447 4
-2019-05-04 00:14:08,990 psychosis_risk_cal INFO     : Updated sucessfully!
-2019-05-04 12:14:09,088 psychosis_risk_cal INFO     : Connect to host.....
-2019-05-04 12:14:09,109 psychosis_risk_cal INFO     : Loaded 199450 documents
-2019-05-04 12:14:21,181 psychosis_risk_cal INFO     : Documents shape: 199450 17
-2019-05-04 12:14:21,182 psychosis_risk_cal INFO     : Change data types
-2019-05-04 12:14:22,273 psychosis_risk_cal INFO     : Documents shape after changing data types: 199450 17
-2019-05-04 12:14:22,326 psychosis_risk_cal INFO     : Mapping ePJS ethnicity names to CRIS ethnicity names
-2019-05-04 12:14:22,477 psychosis_risk_cal INFO     : Calcuating ethnicity coeffs
-2019-05-04 12:14:23,170 psychosis_risk_cal INFO     : Finished calcuating ethnicity coeffs
-2019-05-04 12:14:23,171 psychosis_risk_cal INFO     : Calcuating gender coeffs
-2019-05-04 12:14:23,892 psychosis_risk_cal INFO     : Finished calcuating gender coeffs
-2019-05-04 12:14:23,893 psychosis_risk_cal INFO     : Calcuating age coeffs
-2019-05-04 12:14:23,911 psychosis_risk_cal INFO     : Finished calcuating age coeffs
-2019-05-04 12:14:23,911 psychosis_risk_cal INFO     : Calcuating gender*age coeffs
-2019-05-04 12:14:24,650 psychosis_risk_cal INFO     : Finished calcuating gender*age coeffs
-2019-05-04 12:14:24,650 psychosis_risk_cal INFO     : Mapping ICD-10 codes to disorder categories
-2019-05-04 12:14:26,376 psychosis_risk_cal INFO     : Finshed mapping ICD-10 codes to disorder categories
-2019-05-04 12:14:26,377 psychosis_risk_cal INFO     : Calculating diagnosis coeffs
-2019-05-04 12:14:27,200 psychosis_risk_cal INFO     : Finished calculating diagnosis coeffs
-2019-05-04 12:14:27,200 psychosis_risk_cal INFO     : Labeling records that do not miss any predictors
-2019-05-04 12:14:27,233 psychosis_risk_cal INFO     : Calculating risk scores per year
-2019-05-04 12:14:28,418 psychosis_risk_cal INFO     : Finished calculating risk scores per year
-2019-05-04 12:14:28,477 psychosis_risk_cal INFO     : Write patients at risk into Cogstack
-2019-05-04 12:14:28,477 psychosis_risk_cal INFO     : Numbers of risky patients: 130929 32
-2019-05-04 12:14:59,473 psychosis_risk_cal INFO     : Write sucessfully!
-2019-05-04 12:14:59,473 psychosis_risk_cal INFO     : Update records in source table
-2019-05-04 12:14:59,503 psychosis_risk_cal INFO     : Numbers of records that are needed to update: 199450 4
-2019-05-04 12:15:29,669 psychosis_risk_cal INFO     : Updated sucessfully!
-2019-05-05 00:15:29,767 psychosis_risk_cal INFO     : Connect to host.....
-2019-05-05 00:15:29,779 psychosis_risk_cal INFO     : Loaded 199453 documents
-2019-05-05 00:15:42,404 psychosis_risk_cal INFO     : Documents shape: 199453 17
-2019-05-05 00:15:42,405 psychosis_risk_cal INFO     : Change data types
-2019-05-05 00:15:43,371 psychosis_risk_cal INFO     : Documents shape after changing data types: 199453 17
-2019-05-05 00:15:43,434 psychosis_risk_cal INFO     : Mapping ePJS ethnicity names to CRIS ethnicity names
-2019-05-05 00:15:43,655 psychosis_risk_cal INFO     : Calcuating ethnicity coeffs
-2019-05-05 00:15:44,448 psychosis_risk_cal INFO     : Finished calcuating ethnicity coeffs
-2019-05-05 00:15:44,448 psychosis_risk_cal INFO     : Calcuating gender coeffs
-2019-05-05 00:15:45,096 psychosis_risk_cal INFO     : Finished calcuating gender coeffs
-2019-05-05 00:15:45,096 psychosis_risk_cal INFO     : Calcuating age coeffs
-2019-05-05 00:15:45,116 psychosis_risk_cal INFO     : Finished calcuating age coeffs
-2019-05-05 00:15:45,116 psychosis_risk_cal INFO     : Calcuating gender*age coeffs
-2019-05-05 00:15:45,838 psychosis_risk_cal INFO     : Finished calcuating gender*age coeffs
-2019-05-05 00:15:45,838 psychosis_risk_cal INFO     : Mapping ICD-10 codes to disorder categories
-2019-05-05 00:15:47,506 psychosis_risk_cal INFO     : Finshed mapping ICD-10 codes to disorder categories
-2019-05-05 00:15:47,506 psychosis_risk_cal INFO     : Calculating diagnosis coeffs
-2019-05-05 00:15:48,339 psychosis_risk_cal INFO     : Finished calculating diagnosis coeffs
-2019-05-05 00:15:48,340 psychosis_risk_cal INFO     : Labeling records that do not miss any predictors
-2019-05-05 00:15:48,374 psychosis_risk_cal INFO     : Calculating risk scores per year
-2019-05-05 00:15:49,478 psychosis_risk_cal INFO     : Finished calculating risk scores per year
-2019-05-05 00:15:49,549 psychosis_risk_cal INFO     : Write patients at risk into Cogstack
-2019-05-05 00:15:49,549 psychosis_risk_cal INFO     : Numbers of risky patients: 130932 32
-2019-05-05 00:16:20,580 psychosis_risk_cal INFO     : Write sucessfully!
-2019-05-05 00:16:20,580 psychosis_risk_cal INFO     : Update records in source table
-2019-05-05 00:16:20,607 psychosis_risk_cal INFO     : Numbers of records that are needed to update: 199453 4
-2019-05-05 00:16:50,594 psychosis_risk_cal INFO     : Updated sucessfully!
-2019-05-05 12:16:50,605 psychosis_risk_cal INFO     : Connect to host.....
-2019-05-05 12:16:50,623 psychosis_risk_cal INFO     : Loaded 199456 documents
-2019-05-05 12:17:02,627 psychosis_risk_cal INFO     : Documents shape: 199456 17
-2019-05-05 12:17:02,628 psychosis_risk_cal INFO     : Change data types
-2019-05-05 12:17:03,508 psychosis_risk_cal INFO     : Documents shape after changing data types: 199456 17
-2019-05-05 12:17:03,563 psychosis_risk_cal INFO     : Mapping ePJS ethnicity names to CRIS ethnicity names
-2019-05-05 12:17:03,719 psychosis_risk_cal INFO     : Calcuating ethnicity coeffs
-2019-05-05 12:17:04,415 psychosis_risk_cal INFO     : Finished calcuating ethnicity coeffs
-2019-05-05 12:17:04,415 psychosis_risk_cal INFO     : Calcuating gender coeffs
-2019-05-05 12:17:05,107 psychosis_risk_cal INFO     : Finished calcuating gender coeffs
-2019-05-05 12:17:05,107 psychosis_risk_cal INFO     : Calcuating age coeffs
-2019-05-05 12:17:05,127 psychosis_risk_cal INFO     : Finished calcuating age coeffs
-2019-05-05 12:17:05,127 psychosis_risk_cal INFO     : Calcuating gender*age coeffs
-2019-05-05 12:17:05,940 psychosis_risk_cal INFO     : Finished calcuating gender*age coeffs
-2019-05-05 12:17:05,941 psychosis_risk_cal INFO     : Mapping ICD-10 codes to disorder categories
-2019-05-05 12:17:07,602 psychosis_risk_cal INFO     : Finshed mapping ICD-10 codes to disorder categories
-2019-05-05 12:17:07,602 psychosis_risk_cal INFO     : Calculating diagnosis coeffs
-2019-05-05 12:17:08,393 psychosis_risk_cal INFO     : Finished calculating diagnosis coeffs
-2019-05-05 12:17:08,393 psychosis_risk_cal INFO     : Labeling records that do not miss any predictors
-2019-05-05 12:17:08,425 psychosis_risk_cal INFO     : Calculating risk scores per year
-2019-05-05 12:17:09,491 psychosis_risk_cal INFO     : Finished calculating risk scores per year
-2019-05-05 12:17:09,551 psychosis_risk_cal INFO     : Write patients at risk into Cogstack
-2019-05-05 12:17:09,551 psychosis_risk_cal INFO     : Numbers of risky patients: 130934 32
-2019-05-05 12:17:40,294 psychosis_risk_cal INFO     : Write sucessfully!
-2019-05-05 12:17:40,294 psychosis_risk_cal INFO     : Update records in source table
-2019-05-05 12:17:40,321 psychosis_risk_cal INFO     : Numbers of records that are needed to update: 199456 4
-2019-05-05 12:18:10,084 psychosis_risk_cal INFO     : Updated sucessfully!
-2019-05-06 00:18:10,169 psychosis_risk_cal INFO     : Connect to host.....
-2019-05-06 00:18:10,185 psychosis_risk_cal INFO     : Loaded 199461 documents
-2019-05-06 00:18:22,366 psychosis_risk_cal INFO     : Documents shape: 199461 17
-2019-05-06 00:18:22,366 psychosis_risk_cal INFO     : Change data types
-2019-05-06 00:18:23,244 psychosis_risk_cal INFO     : Documents shape after changing data types: 199461 17
-2019-05-06 00:18:23,314 psychosis_risk_cal INFO     : Mapping ePJS ethnicity names to CRIS ethnicity names
-2019-05-06 00:18:23,535 psychosis_risk_cal INFO     : Calcuating ethnicity coeffs
-2019-05-06 00:18:24,284 psychosis_risk_cal INFO     : Finished calcuating ethnicity coeffs
-2019-05-06 00:18:24,284 psychosis_risk_cal INFO     : Calcuating gender coeffs
-2019-05-06 00:18:25,000 psychosis_risk_cal INFO     : Finished calcuating gender coeffs
-2019-05-06 00:18:25,000 psychosis_risk_cal INFO     : Calcuating age coeffs
-2019-05-06 00:18:25,026 psychosis_risk_cal INFO     : Finished calcuating age coeffs
-2019-05-06 00:18:25,026 psychosis_risk_cal INFO     : Calcuating gender*age coeffs
-2019-05-06 00:18:25,938 psychosis_risk_cal INFO     : Finished calcuating gender*age coeffs
-2019-05-06 00:18:25,938 psychosis_risk_cal INFO     : Mapping ICD-10 codes to disorder categories
-2019-05-06 00:18:27,749 psychosis_risk_cal INFO     : Finshed mapping ICD-10 codes to disorder categories
-2019-05-06 00:18:27,749 psychosis_risk_cal INFO     : Calculating diagnosis coeffs
-2019-05-06 00:18:28,556 psychosis_risk_cal INFO     : Finished calculating diagnosis coeffs
-2019-05-06 00:18:28,557 psychosis_risk_cal INFO     : Labeling records that do not miss any predictors
-2019-05-06 00:18:28,589 psychosis_risk_cal INFO     : Calculating risk scores per year
-2019-05-06 00:18:29,838 psychosis_risk_cal INFO     : Finished calculating risk scores per year
-2019-05-06 00:18:29,899 psychosis_risk_cal INFO     : Write patients at risk into Cogstack
-2019-05-06 00:18:29,899 psychosis_risk_cal INFO     : Numbers of risky patients: 130935 32
-2019-05-06 00:19:00,178 psychosis_risk_cal INFO     : Write sucessfully!
-2019-05-06 00:19:00,178 psychosis_risk_cal INFO     : Update records in source table
-2019-05-06 00:19:00,208 psychosis_risk_cal INFO     : Numbers of records that are needed to update: 199461 4
-2019-05-06 00:19:29,727 psychosis_risk_cal INFO     : Updated sucessfully!
-2019-05-06 12:19:29,789 psychosis_risk_cal INFO     : Connect to host.....
-2019-05-06 12:19:29,804 psychosis_risk_cal INFO     : Loaded 199464 documents
-2019-05-06 12:19:41,947 psychosis_risk_cal INFO     : Documents shape: 199464 17
-2019-05-06 12:19:41,947 psychosis_risk_cal INFO     : Change data types
-2019-05-06 12:19:42,978 psychosis_risk_cal INFO     : Documents shape after changing data types: 199464 17
-2019-05-06 12:19:43,034 psychosis_risk_cal INFO     : Mapping ePJS ethnicity names to CRIS ethnicity names
-2019-05-06 12:19:43,183 psychosis_risk_cal INFO     : Calcuating ethnicity coeffs
-2019-05-06 12:19:43,877 psychosis_risk_cal INFO     : Finished calcuating ethnicity coeffs
-2019-05-06 12:19:43,877 psychosis_risk_cal INFO     : Calcuating gender coeffs
-2019-05-06 12:19:44,569 psychosis_risk_cal INFO     : Finished calcuating gender coeffs
-2019-05-06 12:19:44,569 psychosis_risk_cal INFO     : Calcuating age coeffs
-2019-05-06 12:19:44,589 psychosis_risk_cal INFO     : Finished calcuating age coeffs
-2019-05-06 12:19:44,589 psychosis_risk_cal INFO     : Calcuating gender*age coeffs
-2019-05-06 12:19:45,576 psychosis_risk_cal INFO     : Finished calcuating gender*age coeffs
-2019-05-06 12:19:45,576 psychosis_risk_cal INFO     : Mapping ICD-10 codes to disorder categories
-2019-05-06 12:19:47,603 psychosis_risk_cal INFO     : Finshed mapping ICD-10 codes to disorder categories
-2019-05-06 12:19:47,603 psychosis_risk_cal INFO     : Calculating diagnosis coeffs
-2019-05-06 12:19:48,422 psychosis_risk_cal INFO     : Finished calculating diagnosis coeffs
-2019-05-06 12:19:48,422 psychosis_risk_cal INFO     : Labeling records that do not miss any predictors
-2019-05-06 12:19:48,461 psychosis_risk_cal INFO     : Calculating risk scores per year
-2019-05-06 12:19:49,690 psychosis_risk_cal INFO     : Finished calculating risk scores per year
-2019-05-06 12:19:49,753 psychosis_risk_cal INFO     : Write patients at risk into Cogstack
-2019-05-06 12:19:49,753 psychosis_risk_cal INFO     : Numbers of risky patients: 130937 32
-2019-05-06 12:20:20,044 psychosis_risk_cal INFO     : Write sucessfully!
-2019-05-06 12:20:20,044 psychosis_risk_cal INFO     : Update records in source table
-2019-05-06 12:20:20,072 psychosis_risk_cal INFO     : Numbers of records that are needed to update: 199464 4
-2019-05-06 12:20:49,783 psychosis_risk_cal INFO     : Updated sucessfully!
-2019-05-07 00:20:49,874 psychosis_risk_cal INFO     : Connect to host.....
-2019-05-07 00:20:49,884 psychosis_risk_cal INFO     : Loaded 199467 documents
-2019-05-07 00:21:02,228 psychosis_risk_cal INFO     : Documents shape: 199467 17
-2019-05-07 00:21:02,229 psychosis_risk_cal INFO     : Change data types
-2019-05-07 00:21:03,124 psychosis_risk_cal INFO     : Documents shape after changing data types: 199467 17
-2019-05-07 00:21:03,180 psychosis_risk_cal INFO     : Mapping ePJS ethnicity names to CRIS ethnicity names
-2019-05-07 00:21:03,336 psychosis_risk_cal INFO     : Calcuating ethnicity coeffs
-2019-05-07 00:21:04,023 psychosis_risk_cal INFO     : Finished calcuating ethnicity coeffs
-2019-05-07 00:21:04,024 psychosis_risk_cal INFO     : Calcuating gender coeffs
-2019-05-07 00:21:04,736 psychosis_risk_cal INFO     : Finished calcuating gender coeffs
-2019-05-07 00:21:04,736 psychosis_risk_cal INFO     : Calcuating age coeffs
-2019-05-07 00:21:04,757 psychosis_risk_cal INFO     : Finished calcuating age coeffs
-2019-05-07 00:21:04,757 psychosis_risk_cal INFO     : Calcuating gender*age coeffs
-2019-05-07 00:21:05,594 psychosis_risk_cal INFO     : Finished calcuating gender*age coeffs
-2019-05-07 00:21:05,595 psychosis_risk_cal INFO     : Mapping ICD-10 codes to disorder categories
-2019-05-07 00:21:07,205 psychosis_risk_cal INFO     : Finshed mapping ICD-10 codes to disorder categories
-2019-05-07 00:21:07,205 psychosis_risk_cal INFO     : Calculating diagnosis coeffs
-2019-05-07 00:21:07,945 psychosis_risk_cal INFO     : Finished calculating diagnosis coeffs
-2019-05-07 00:21:07,946 psychosis_risk_cal INFO     : Labeling records that do not miss any predictors
-2019-05-07 00:21:07,980 psychosis_risk_cal INFO     : Calculating risk scores per year
-2019-05-07 00:21:09,073 psychosis_risk_cal INFO     : Finished calculating risk scores per year
-2019-05-07 00:21:09,128 psychosis_risk_cal INFO     : Write patients at risk into Cogstack
-2019-05-07 00:21:09,128 psychosis_risk_cal INFO     : Numbers of risky patients: 130940 32
-2019-05-07 00:21:39,562 psychosis_risk_cal INFO     : Write sucessfully!
-2019-05-07 00:21:39,562 psychosis_risk_cal INFO     : Update records in source table
-2019-05-07 00:21:39,592 psychosis_risk_cal INFO     : Numbers of records that are needed to update: 199467 4
-2019-05-07 00:22:08,529 psychosis_risk_cal INFO     : Updated sucessfully!
-2019-05-07 12:22:08,628 psychosis_risk_cal INFO     : Connect to host.....
-2019-05-07 12:22:08,657 psychosis_risk_cal INFO     : Loaded 199472 documents
-2019-05-07 12:22:20,955 psychosis_risk_cal INFO     : Documents shape: 199472 17
-2019-05-07 12:22:20,956 psychosis_risk_cal INFO     : Change data types
-2019-05-07 12:22:21,844 psychosis_risk_cal INFO     : Documents shape after changing data types: 199472 17
-2019-05-07 12:22:21,898 psychosis_risk_cal INFO     : Mapping ePJS ethnicity names to CRIS ethnicity names
-2019-05-07 12:22:22,034 psychosis_risk_cal INFO     : Calcuating ethnicity coeffs
-2019-05-07 12:22:22,742 psychosis_risk_cal INFO     : Finished calcuating ethnicity coeffs
-2019-05-07 12:22:22,742 psychosis_risk_cal INFO     : Calcuating gender coeffs
-2019-05-07 12:22:23,455 psychosis_risk_cal INFO     : Finished calcuating gender coeffs
-2019-05-07 12:22:23,456 psychosis_risk_cal INFO     : Calcuating age coeffs
-2019-05-07 12:22:23,475 psychosis_risk_cal INFO     : Finished calcuating age coeffs
-2019-05-07 12:22:23,475 psychosis_risk_cal INFO     : Calcuating gender*age coeffs
-2019-05-07 12:22:24,203 psychosis_risk_cal INFO     : Finished calcuating gender*age coeffs
-2019-05-07 12:22:24,203 psychosis_risk_cal INFO     : Mapping ICD-10 codes to disorder categories
-2019-05-07 12:22:25,827 psychosis_risk_cal INFO     : Finshed mapping ICD-10 codes to disorder categories
-2019-05-07 12:22:25,828 psychosis_risk_cal INFO     : Calculating diagnosis coeffs
-2019-05-07 12:22:26,636 psychosis_risk_cal INFO     : Finished calculating diagnosis coeffs
-2019-05-07 12:22:26,637 psychosis_risk_cal INFO     : Labeling records that do not miss any predictors
-2019-05-07 12:22:26,669 psychosis_risk_cal INFO     : Calculating risk scores per year
-2019-05-07 12:22:27,732 psychosis_risk_cal INFO     : Finished calculating risk scores per year
-2019-05-07 12:22:27,795 psychosis_risk_cal INFO     : Write patients at risk into Cogstack
-2019-05-07 12:22:27,795 psychosis_risk_cal INFO     : Numbers of risky patients: 130942 32
-2019-05-07 12:22:58,069 psychosis_risk_cal INFO     : Write sucessfully!
-2019-05-07 12:22:58,069 psychosis_risk_cal INFO     : Update records in source table
-2019-05-07 12:22:58,094 psychosis_risk_cal INFO     : Numbers of records that are needed to update: 199472 4
-2019-05-07 12:23:26,483 psychosis_risk_cal INFO     : Updated sucessfully!
+2019-05-13 14:31:40,246 psychosis_risk_cal INFO     : Connect to host.....
+2019-05-13 14:31:40,253 psychosis_risk_cal INFO     : Loaded 25189 documents
+2019-05-13 14:31:41,967 psychosis_risk_cal INFO     : Documents shape: 25189 17
+2019-05-13 14:31:41,967 psychosis_risk_cal INFO     : Change data types
+2019-05-13 14:31:42,048 psychosis_risk_cal INFO     : Documents shape after changing data types: 25189 17
+2019-05-13 14:31:42,049 psychosis_risk_cal INFO     : Mapping ePJS ethnicity names to CRIS ethnicity names
+2019-05-13 14:31:42,062 psychosis_risk_cal INFO     : Calcuating ethnicity coeffs
+2019-05-13 14:31:42,140 psychosis_risk_cal INFO     : Finished calcuating ethnicity coeffs
+2019-05-13 14:31:42,140 psychosis_risk_cal INFO     : Calcuating gender coeffs
+2019-05-13 14:31:42,196 psychosis_risk_cal INFO     : Finished calcuating gender coeffs
+2019-05-13 14:31:42,196 psychosis_risk_cal INFO     : Calcuating age coeffs
+2019-05-13 14:31:42,227 psychosis_risk_cal INFO     : Finished calcuating age coeffs
+2019-05-13 14:31:42,227 psychosis_risk_cal INFO     : Calcuating gender*age coeffs
+2019-05-13 14:31:42,367 psychosis_risk_cal INFO     : Finished calcuating gender*age coeffs
+2019-05-13 14:31:42,367 psychosis_risk_cal INFO     : Mapping ICD-10 codes to disorder categories
+2019-05-13 14:31:42,686 psychosis_risk_cal INFO     : Finshed mapping ICD-10 codes to disorder categories
+2019-05-13 14:31:42,686 psychosis_risk_cal INFO     : Calculating diagnosis coeffs
+2019-05-13 14:31:42,807 psychosis_risk_cal INFO     : Finished calculating diagnosis coeffs
+2019-05-13 14:31:42,807 psychosis_risk_cal INFO     : Labeling records that do not miss any predictors
+2019-05-13 14:31:42,817 psychosis_risk_cal INFO     : Calculating risk scores per year
+2019-05-13 14:31:42,913 psychosis_risk_cal INFO     : Finished calculating risk scores per year
+2019-05-13 14:31:42,913 psychosis_risk_cal INFO     : Write patients at risk into Cogstack
+2019-05-13 14:31:42,913 psychosis_risk_cal INFO     : Numbers of risky patients: 0 32
+2019-05-13 14:31:42,913 psychosis_risk_cal INFO     : Update records in source table
+2019-05-13 14:31:42,916 psychosis_risk_cal INFO     : Numbers of records that are needed to update: 25189 4
+2019-05-13 14:31:47,527 psychosis_risk_cal INFO     : Updated sucessfully!
+2019-05-14 02:31:47,615 psychosis_risk_cal INFO     : Connect to host.....
+2019-05-14 02:31:47,632 psychosis_risk_cal INFO     : Loaded 199750 documents
+2019-05-14 02:32:00,134 psychosis_risk_cal INFO     : Documents shape: 199750 17
+2019-05-14 02:32:00,134 psychosis_risk_cal INFO     : Change data types
+2019-05-14 02:32:01,046 psychosis_risk_cal INFO     : Documents shape after changing data types: 199750 17
+2019-05-14 02:32:01,054 psychosis_risk_cal INFO     : Mapping ePJS ethnicity names to CRIS ethnicity names
+2019-05-14 02:32:01,169 psychosis_risk_cal INFO     : Calcuating ethnicity coeffs
+2019-05-14 02:32:01,880 psychosis_risk_cal INFO     : Finished calcuating ethnicity coeffs
+2019-05-14 02:32:01,880 psychosis_risk_cal INFO     : Calcuating gender coeffs
+2019-05-14 02:32:02,612 psychosis_risk_cal INFO     : Finished calcuating gender coeffs
+2019-05-14 02:32:02,612 psychosis_risk_cal INFO     : Calcuating age coeffs
+2019-05-14 02:32:02,632 psychosis_risk_cal INFO     : Finished calcuating age coeffs
+2019-05-14 02:32:02,632 psychosis_risk_cal INFO     : Calcuating gender*age coeffs
+2019-05-14 02:32:03,591 psychosis_risk_cal INFO     : Finished calcuating gender*age coeffs
+2019-05-14 02:32:03,592 psychosis_risk_cal INFO     : Mapping ICD-10 codes to disorder categories
+2019-05-14 02:32:05,525 psychosis_risk_cal INFO     : Finshed mapping ICD-10 codes to disorder categories
+2019-05-14 02:32:05,525 psychosis_risk_cal INFO     : Calculating diagnosis coeffs
+2019-05-14 02:32:06,569 psychosis_risk_cal INFO     : Finished calculating diagnosis coeffs
+2019-05-14 02:32:06,569 psychosis_risk_cal INFO     : Labeling records that do not miss any predictors
+2019-05-14 02:32:06,604 psychosis_risk_cal INFO     : Calculating risk scores per year
+2019-05-14 02:32:07,893 psychosis_risk_cal INFO     : Finished calculating risk scores per year
+2019-05-14 02:32:07,893 psychosis_risk_cal INFO     : Write patients at risk into Cogstack
+2019-05-14 02:32:07,893 psychosis_risk_cal INFO     : Numbers of risky patients: 131080 32
+2019-05-14 02:32:37,703 psychosis_risk_cal INFO     : Write sucessfully!
+2019-05-14 02:32:37,703 psychosis_risk_cal INFO     : Update records in source table
+2019-05-14 02:32:37,717 psychosis_risk_cal INFO     : Numbers of records that are needed to update: 199750 4
+2019-05-14 02:33:05,743 psychosis_risk_cal INFO     : Updated sucessfully!
+2019-05-14 14:33:05,814 psychosis_risk_cal INFO     : Connect to host.....
+2019-05-14 14:33:05,827 psychosis_risk_cal INFO     : Loaded 199750 documents
+2019-05-14 14:33:18,603 psychosis_risk_cal INFO     : Documents shape: 199750 17
+2019-05-14 14:33:18,603 psychosis_risk_cal INFO     : Change data types
+2019-05-14 14:33:19,518 psychosis_risk_cal INFO     : Documents shape after changing data types: 199750 17
+2019-05-14 14:33:19,572 psychosis_risk_cal INFO     : Mapping ePJS ethnicity names to CRIS ethnicity names
+2019-05-14 14:33:19,710 psychosis_risk_cal INFO     : Calcuating ethnicity coeffs
+2019-05-14 14:33:20,416 psychosis_risk_cal INFO     : Finished calcuating ethnicity coeffs
+2019-05-14 14:33:20,416 psychosis_risk_cal INFO     : Calcuating gender coeffs
+2019-05-14 14:33:21,128 psychosis_risk_cal INFO     : Finished calcuating gender coeffs
+2019-05-14 14:33:21,128 psychosis_risk_cal INFO     : Calcuating age coeffs
+2019-05-14 14:33:21,147 psychosis_risk_cal INFO     : Finished calcuating age coeffs
+2019-05-14 14:33:21,147 psychosis_risk_cal INFO     : Calcuating gender*age coeffs
+2019-05-14 14:33:21,884 psychosis_risk_cal INFO     : Finished calcuating gender*age coeffs
+2019-05-14 14:33:21,884 psychosis_risk_cal INFO     : Mapping ICD-10 codes to disorder categories
+2019-05-14 14:33:23,535 psychosis_risk_cal INFO     : Finshed mapping ICD-10 codes to disorder categories
+2019-05-14 14:33:23,536 psychosis_risk_cal INFO     : Calculating diagnosis coeffs
+2019-05-14 14:33:24,363 psychosis_risk_cal INFO     : Finished calculating diagnosis coeffs
+2019-05-14 14:33:24,363 psychosis_risk_cal INFO     : Labeling records that do not miss any predictors
+2019-05-14 14:33:24,397 psychosis_risk_cal INFO     : Calculating risk scores per year
+2019-05-14 14:33:25,533 psychosis_risk_cal INFO     : Finished calculating risk scores per year
+2019-05-14 14:33:25,592 psychosis_risk_cal INFO     : Write patients at risk into Cogstack
+2019-05-14 14:33:25,592 psychosis_risk_cal INFO     : Numbers of risky patients: 131080 32
+2019-05-14 14:33:56,138 psychosis_risk_cal INFO     : Write sucessfully!
+2019-05-14 14:33:56,139 psychosis_risk_cal INFO     : Update records in source table
+2019-05-14 14:33:56,170 psychosis_risk_cal INFO     : Numbers of records that are needed to update: 199750 4
+2019-05-14 14:34:23,851 psychosis_risk_cal INFO     : Updated sucessfully!
