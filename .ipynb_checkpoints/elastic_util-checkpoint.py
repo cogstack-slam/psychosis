@@ -1,6 +1,7 @@
 import json
 from datetime import date, datetime
 import numpy as np
+import pandas as pd
 
 def json_serial(obj):
     """JSON serializer for objects not serializable by default json code"""
@@ -18,10 +19,13 @@ def bulk_insert(client, df, INDEX, TYPE, doc_index):
     if not client.indices.exists(INDEX):
     #     raise RuntimeError('index %s does not exists'%INDEX)
         client.indices.create(INDEX)
+    df = df.where(pd.notnull(df), None)
     n = int(df.shape[0]/3000) + 1
     for d in np.array_split(df, n):
         r = client.bulk(rec_to_actions(d, INDEX, TYPE, doc_index)) # return a dict
         if(r["errors"]):
+            
+            print(r)
             return False
     return True
 
@@ -35,9 +39,11 @@ def bulk_update(client, df, INDEX, TYPE, doc_index):
     if not client.indices.exists(INDEX):
         raise RuntimeError('index %s does not exists'%INDEX)
 #         client.indices.create(INDEX)
+    df = df.where(pd.notnull(df), None)
     n = int(df.shape[0]/3000) + 1
     for d in np.array_split(df, n):
         r = client.bulk(update_to_actions(d, INDEX, TYPE, doc_index)) # return a dict
         if(r["errors"]):
+            print(r)
             return False
     return True
