@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[47]:
+# In[1]:
 
 
 
-# In[48]:
+# In[2]:
 
 
 from elasticsearch import Elasticsearch
@@ -21,7 +21,7 @@ import time
 
 # # Load data from Cogstack
 
-# In[49]:
+# In[3]:
 
 
 logger = logging.getLogger('psychosis_risk_cal')
@@ -33,7 +33,7 @@ logger.addHandler(handler)
 logger.setLevel(logging.DEBUG)
 
 
-# In[50]:
+# In[26]:
 
 
 def read_elas_index(client, index, doc_type='doc'):
@@ -57,7 +57,7 @@ def read_elas_index(client, index, doc_type='doc'):
 
 # # Ethnicity (changed to lower for string match and added two mapping rules)
 
-# In[51]:
+# In[5]:
 
 
 # Added the following two lines in original list
@@ -72,7 +72,7 @@ def read_eth_mapping(file_path='ethnicity_mapping.txt'):
     return eth_map
 
 
-# In[52]:
+# In[6]:
 
 
 def ethnicity_coeff(df):
@@ -105,7 +105,7 @@ def ethnicity_coeff(df):
 
 # # Gender
 
-# In[53]:
+# In[7]:
 
 
 def gender_coeff(df):
@@ -120,13 +120,13 @@ def gender_coeff(df):
 
 # # Age
 
-# In[41]:
+# In[8]:
 
 
 # np.floor(13.2)
 
 
-# In[42]:
+# In[9]:
 
 
 # Age should be int, not float. using floor. 
@@ -135,6 +135,9 @@ def age_coeff(df):
     df['age_coeff'] = None
 
     df['age_at_index_diagnosis'] = np.floor((df['first_primary_diagnosis_date'] - df['patient_date_of_birth'])/np.timedelta64(1, 'Y'))
+#     Remove age < 0 to remove system error in 2009-11-27/28
+    df = df.copy()
+    df = df.loc[df['age_at_index_diagnosis'] >= 0]
     df['age_coeff'] = df['age_at_index_diagnosis']*0.0117113
     df['age_coeff'] = df['age_coeff'].astype(float)
     logger.info('Finished calcuating age coeffs')
@@ -143,7 +146,7 @@ def age_coeff(df):
 
 # # Gender & Age
 
-# In[43]:
+# In[10]:
 
 
 def gender_age_coeff(df):
@@ -158,7 +161,7 @@ def gender_age_coeff(df):
 
 # # Diagnosis index (added exclusions)
 
-# In[44]:
+# In[11]:
 
 
 def diag_coeff(df):
@@ -240,7 +243,7 @@ def diag_coeff(df):
 
 # # Risk scores
 
-# In[45]:
+# In[12]:
 
 
 def risk_score(df):
@@ -284,14 +287,14 @@ def risk_score(df):
 
 
 
-# In[46]:
+# In[25]:
 
 
 while True:
     logger.info('Connect to host.....')
     client = Elasticsearch(['http://10.16.31.65:9200/'], request_timeout=600)
 
-    df = read_elas_index(client, index='psychosis_base', doc_type='doc')
+    df = read_elas_index(client, index='psychosis_referral_base', doc_type='doc')
     df = ethnicity_coeff(df)
     df = gender_coeff(df)
     df = age_coeff(df)
@@ -315,7 +318,7 @@ while True:
 
     logger.info('Update records in source table')
     if df.shape[0] > 0:
-        INDEX="psychosis_base"
+        INDEX="psychosis_referral_base"
         TYPE= "doc"
         doc_index = 'patient_id'
         df_update = df[['patient_id','coeff_validated', 'risk_calculated_dttm', 'exist_risk_score']]
@@ -325,7 +328,7 @@ while True:
             logger.info('Updated sucessfully!')
         else:
             logger.info('Updated UNsucessfully!!!!')
-    time.sleep(12 * 60 * 60)
+    time.sleep(12 * 60* 60)
 
 
 # In[ ]:
