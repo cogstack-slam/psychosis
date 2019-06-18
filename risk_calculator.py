@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[17]:
 
 
 
@@ -33,7 +33,7 @@ logger.addHandler(handler)
 logger.setLevel(logging.DEBUG)
 
 
-# In[26]:
+# In[4]:
 
 
 def read_elas_index(client, index, doc_type='doc'):
@@ -55,9 +55,21 @@ def read_elas_index(client, index, doc_type='doc'):
     return df
 
 
+# # Location (exclude patients out of SLaM)
+
+# In[15]:
+
+
+def exclude_location (df):
+    bs = ['Lambeth', 'Southwark', 'Lewisham', 'Croydon']
+    df = df[df['pct_name'].notna()]
+    df = df[df['pct_name'].str.contains('|'.join(bs), case=False)]
+    return df
+
+
 # # Ethnicity (changed to lower for string match and added two mapping rules)
 
-# In[5]:
+# In[6]:
 
 
 # Added the following two lines in original list
@@ -72,7 +84,7 @@ def read_eth_mapping(file_path='ethnicity_mapping.txt'):
     return eth_map
 
 
-# In[6]:
+# In[7]:
 
 
 def ethnicity_coeff(df):
@@ -105,7 +117,7 @@ def ethnicity_coeff(df):
 
 # # Gender
 
-# In[7]:
+# In[8]:
 
 
 def gender_coeff(df):
@@ -120,13 +132,13 @@ def gender_coeff(df):
 
 # # Age
 
-# In[8]:
+# In[9]:
 
 
 # np.floor(13.2)
 
 
-# In[9]:
+# In[10]:
 
 
 # Age should be int, not float. using floor. 
@@ -135,7 +147,7 @@ def age_coeff(df):
     df['age_coeff'] = None
 
     df['age_at_index_diagnosis'] = np.floor((df['first_primary_diagnosis_date'] - df['patient_date_of_birth'])/np.timedelta64(1, 'Y'))
-#     Remove age < 0 to remove system error in 2009-11-27/28
+#     Remove age < 0 to remove default date 1900-01-01 due to system error in 2009-11-27/28
     df = df.copy()
     df = df.loc[df['age_at_index_diagnosis'] >= 0]
     df['age_coeff'] = df['age_at_index_diagnosis']*0.0117113
@@ -146,7 +158,7 @@ def age_coeff(df):
 
 # # Gender & Age
 
-# In[10]:
+# In[11]:
 
 
 def gender_age_coeff(df):
@@ -161,7 +173,7 @@ def gender_age_coeff(df):
 
 # # Diagnosis index (added exclusions)
 
-# In[11]:
+# In[12]:
 
 
 def diag_coeff(df):
@@ -243,7 +255,7 @@ def diag_coeff(df):
 
 # # Risk scores
 
-# In[12]:
+# In[13]:
 
 
 def risk_score(df):
@@ -287,14 +299,15 @@ def risk_score(df):
 
 
 
-# In[25]:
+# In[16]:
 
 
 while True:
     logger.info('Connect to host.....')
     client = Elasticsearch(['http://10.16.31.65:9200/'], request_timeout=600)
 
-    df = read_elas_index(client, index='psychosis_referral_base', doc_type='doc')
+    df = read_elas_index(client, index='psychosis_base', doc_type='doc')
+    df = exclude_location(df)
     df = ethnicity_coeff(df)
     df = gender_coeff(df)
     df = age_coeff(df)
@@ -318,7 +331,7 @@ while True:
 
     logger.info('Update records in source table')
     if df.shape[0] > 0:
-        INDEX="psychosis_referral_base"
+        INDEX="psychosis_base"
         TYPE= "doc"
         doc_index = 'patient_id'
         df_update = df[['patient_id','coeff_validated', 'risk_calculated_dttm', 'exist_risk_score']]
