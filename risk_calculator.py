@@ -1,13 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[17]:
-
-
-
-# In[2]:
-
-
 from elasticsearch import Elasticsearch
 from elasticsearch_dsl import Search
 import pandas as pd
@@ -33,7 +23,7 @@ logger.addHandler(handler)
 logger.setLevel(logging.DEBUG)
 
 
-# In[4]:
+# In[47]:
 
 
 def read_elas_index(client, index, doc_type='doc'):
@@ -57,11 +47,13 @@ def read_elas_index(client, index, doc_type='doc'):
 
 # # Location (exclude patients out of SLaM)
 
-# In[15]:
+# In[37]:
 
 
+# Clinical Commissioning Groups (CCGs) were created following the Health and Social Care Act in 2012, and replaced Primary Care Trusts on 1 April 2013. They are clinically-led statutory NHS bodies responsible for the planning and commissioning of health care services for their local area. As of 1 April 2019 there are 191 CCGs in England.
+# https://www.nhscc.org/ccgs/
 def exclude_location (df):
-    bs = ['Lambeth', 'Southwark', 'Lewisham', 'Croydon']
+    bs = ['Lambeth CCG', 'Southwark CCG', 'Lewisham CCG', 'Croydon CCG']
     df = df[df['pct_name'].notna()]
     df = df[df['pct_name'].str.contains('|'.join(bs), case=False)]
     return df
@@ -69,7 +61,7 @@ def exclude_location (df):
 
 # # Ethnicity (changed to lower for string match and added two mapping rules)
 
-# In[6]:
+# In[38]:
 
 
 # Added the following two lines in original list
@@ -84,7 +76,7 @@ def read_eth_mapping(file_path='ethnicity_mapping.txt'):
     return eth_map
 
 
-# In[7]:
+# In[39]:
 
 
 def ethnicity_coeff(df):
@@ -101,6 +93,12 @@ def ethnicity_coeff(df):
     asian = [s.lower() for s in ['Indian (H)','Pakistani (J)','Any other Asian background (L)','Chinese (R)','Bangladeshi (K)']]
     mixed = [s.lower() for s in ['White and black Caribbean (D)','White and Black African (E)','White and Asian (F)','Any other mixed background (G)']]
     other = [s.lower() for s in ['Any other ethnic group (S)']]
+    
+    df.loc[df['patient_demography_ethnicity_cris'].isin(asian), 'patient_demography_ethnicity_cris_group'] = 'Asian'
+    df.loc[df['patient_demography_ethnicity_cris'].isin(black), 'patient_demography_ethnicity_cris_group'] = 'Black'
+    df.loc[df['patient_demography_ethnicity_cris'].isin(mixed), 'patient_demography_ethnicity_cris_group'] = 'Mixed'
+    df.loc[df['patient_demography_ethnicity_cris'].isin(other), 'patient_demography_ethnicity_cris_group'] = 'Other'
+    df.loc[df['patient_demography_ethnicity_cris'].isin(white), 'patient_demography_ethnicity_cris_group'] = 'White'
 
     df.loc[df['patient_demography_ethnicity_cris'].isin(asian), 'eth_coeff'] = 0.5143438
     df.loc[df['patient_demography_ethnicity_cris'].isin(black), 'eth_coeff'] = 1.037915
@@ -117,7 +115,7 @@ def ethnicity_coeff(df):
 
 # # Gender
 
-# In[8]:
+# In[40]:
 
 
 def gender_coeff(df):
@@ -132,13 +130,13 @@ def gender_coeff(df):
 
 # # Age
 
-# In[9]:
+# In[41]:
 
 
 # np.floor(13.2)
 
 
-# In[10]:
+# In[42]:
 
 
 # Age should be int, not float. using floor. 
@@ -158,7 +156,7 @@ def age_coeff(df):
 
 # # Gender & Age
 
-# In[11]:
+# In[43]:
 
 
 def gender_age_coeff(df):
@@ -173,7 +171,7 @@ def gender_age_coeff(df):
 
 # # Diagnosis index (added exclusions)
 
-# In[12]:
+# In[44]:
 
 
 def diag_coeff(df):
@@ -255,7 +253,7 @@ def diag_coeff(df):
 
 # # Risk scores
 
-# In[13]:
+# In[45]:
 
 
 def risk_score(df):
@@ -299,7 +297,7 @@ def risk_score(df):
 
 
 
-# In[16]:
+# In[46]:
 
 
 while True:
@@ -344,13 +342,6 @@ while True:
     time.sleep(12 * 60* 60)
 
 
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 
