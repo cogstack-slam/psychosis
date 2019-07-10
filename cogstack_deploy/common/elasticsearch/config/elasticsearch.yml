@@ -45,23 +45,11 @@ xpack.notification.email.account:
     exchange_account:
         profile: outlook
         email_defaults:
-            from: Tao.Wang@slam.nhs.uk
+            from: username@nhs.uk
         smtp:
             auth: true
             starttls.enable: false
-            host: webmail.slam.nhs.uk
+            host: webmail.nhs.uk
             port: 587
-            user: slam\TWang
-            password: whatawonderfulworld19
-            
-# xpack.notification.email.account:
-#     outlook_account:
-#         profile: outlook
-#         smtp:
-#             auth: true
-#             starttls.enable: true
-#             host: smtp-mail.outlook.com
-#             port: 587
-#             user: tao.wang@slam.nhs.uk
-#             password: whatawonderfulworld19
-
+            user: username
+            password: password
